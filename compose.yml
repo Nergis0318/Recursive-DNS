@@ -1,10 +1,10 @@
 name: recursive-dns
+
 services:
-    recursive-dns:
-        container_name: recursive-dns
-        ports:
-            - 53:53/udp
-            - 53:53/tcp
-        restart: always
-        image: ghcr.io/devnergis/recursive-dns:latest
-        
+  recursive-dns:
+    image: ghcr.io/nergis0318/recursive-dns:latest
+    container_name: recursive-dns
+    restart: always
+    ports:
+      - 53:53/udp
+      - 53:53/tcp
